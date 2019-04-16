@@ -89,9 +89,9 @@ class myssh:
     def __call__(self, command):
         stdout_outputs = []
         pre_command = """
-        declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/kisoft/db/product/12.1.0/db_1/bin/:/opt/dell/srvadmin/bin:/opt/dell/srvadmin/sbin:/root/bin";
-        declare -x ORACLE_BASE="/kisoft/db";
-        declare -x ORACLE_HOME="/kisoft/db/product/12.1.0/db_1";
+        declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/u01/db/product/12.1.0/db_1/bin/:/opt/dell/srvadmin/bin:/opt/dell/srvadmin/sbin:/root/bin";
+        declare -x ORACLE_BASE="/u01/db";
+        declare -x ORACLE_HOME="/u01/db/product/12.1.0/db_1";
         . ~/.bash_profile;
         """
         command= pre_command + command
